@@ -44,5 +44,12 @@ $ npm run seeder
 $ npm run start
 ```
 After that, open the browser at http://localhost:3000/ to view the result.
+
+The authentication and authorization system can be tested with the following access data:
+```
+ Admin  111111
+ Author 222222
+ User   333333
+```
 ## Links
 [Live Demo](https://tutorials-app.herokuapp.com/)
