@@ -1,0 +1,176 @@
+body {
+	background-image: url('images/background.jpg');
+	color: #ffffff;
+	font-family: 'Nunito', sans-serif;
+	font-weight: 200;
+	font-size: large;
+	margin: 0;
+}
+
+.Site {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.Site-content {
+	flex: 1 0 auto;
+	padding: 2em 0 2em 0;
+	width: 100%;
+}
+
+.Site-content:after {
+	content: '\00a0';
+	display: block;
+	margin-top: 2em;
+	height: 0;
+	visibility: hidden;
+}
+
+h3, h4, small, label {
+	color: white;
+}
+
+.navbar {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.nav-link {
+	color: aqua;
+}
+
+.group {
+	background-color: rgba(25, 255, 255, 0.1);
+}
+
+.act {
+	background-color: rgba(25, 255, 255, 0.3);
+}
+
+.list {
+	color: white;
+}
+
+.btn-aqua {
+	border: 1px solid aqua;
+	color: white;
+}
+
+.btn-aqua:hover {
+	color: aqua;
+}
+
+.btn-red {
+	border: 1px solid #ff0000;
+	color: white;
+}
+
+.btn-red:hover {
+	color: #ff0000;
+}
+
+footer {
+	background-color: rgba(0, 0, 0, 0.4);
+	color: white;
+	text-align: center;
+	vertical-align: center;
+	font-size: 14px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	margin-top: 50px;
+}
+
+span {
+	font-style: italic;
+}
+
+label {
+	display: block;
+	margin-top: 10px;
+}
+
+.card-container.card {
+	max-width: 300px !important;
+	padding: 20px 20px;
+}
+
+.card {
+	background-color: rgba(25, 255, 255, 0.1);
+	padding: 20px 25px 30px;
+	margin: 0 auto 25px;
+	margin-top: 20px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	-moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.profile-img-card {
+	width: 96px;
+	height: 96px;
+	margin: 0 auto 10px;
+	display: block;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.MuiPagination-root {
+	background-color: white;
+	border-radius: 3px;
+}
+
+.transparent, .option {
+	background-color: transparent;
+	color: white;
+}
+
+.transparent:focus {
+	background-color: transparent;
+	color: white;
+}
+
+select option {
+	background-color: aqua;
+	color: black;
+}
+
+.green-style {
+	background-color: transparent;
+	border: 1px solid #00ff00;
+	color: #00ff00;
+}
+
+.red-style {
+	background-color: transparent;
+	border: 1px solid #ff0000;
+	color: #ff0000;
+}
+
+.green {
+	color: #00ff00;
+}
+
+.red {
+	color: #ff0000;
+}
+
+.jumbo {
+	background-color: rgba(25, 255, 255, 0.1);
+	text-align: center;
+	vertical-align: center;
+	border: 1px solid rgba(25, 255, 255, 0.1);
+	border-radius: 2px;
+	min-height: 80px;
+}
+
+hr {
+	border: none;
+	color: aqua;
+	background-color: aqua;
+	height: 1px;
+}
+
