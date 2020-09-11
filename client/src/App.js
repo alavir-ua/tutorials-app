@@ -54,12 +54,31 @@ const App = () => {
   return (
     <Router>
       <div className="App Site">
-        <nav className="navbar navbar-expand">
+        <nav className="navbar navbar-expand-md">
           {(!currentUser || showUserBoard) && (
-            <>
-              <a href="/tutorials" className="navbar-brand">
-                TutorialsApp
-              </a>
+            <a href="/tutorials" className="navbar-brand">
+              TutorialsApp
+            </a>
+          )}
+          {showAdminBoard && (
+            <a href="/admin/tutorials" className="navbar-brand">
+              AdminPanel
+            </a>
+          )}
+          {showAuthorBoard && (
+            <a href="/author" className="navbar-brand">
+              AuthorPanel
+            </a>
+          )}
+
+          <button className="navbar-toggler" type="button"  data-toggle="collapse" data-target="#navbar"
+                  aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+
+          <div className="collapse navbar-collapse" id="navbar">
+
+            {(!currentUser || showUserBoard) && (
               <div className="navbar-nav mr-auto">
                 <li className="nav-item">
                   <Link to={"/tutorials"} className="nav-link">
@@ -82,15 +101,9 @@ const App = () => {
                   </Link>
                 </li>
               </div>
-            </>
-          )}
+            )}
 
-          {showAdminBoard && (
-            <>
-              <a href="/admin/tutorials" className="navbar-brand">
-                AdminPanel
-              </a>
-
+            {showAdminBoard && (
               <div className="navbar-nav mr-auto">
 
                 {!showSiteNav && (
@@ -144,14 +157,9 @@ const App = () => {
                   )}
                 </li>
               </div>
-            </>
-          )}
+            )}
 
-          {showAuthorBoard && (
-            <>
-              <a href="/author" className="navbar-brand">
-                AuthorPanel
-              </a>
+            {showAuthorBoard && (
               <div className="navbar-nav mr-auto">
                 <li className="nav-item">
                   <Link to={"/authors/tutorials"} className="nav-link">
@@ -164,47 +172,46 @@ const App = () => {
                   </Link>
                 </li>
               </div>
-            </>
-          )}
+            )}
 
-          {currentUser ? (
-            <div className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <p className="nav-link">
-                  {currentUser.username}
-                </p>
-              </li>
-              {showUserBoard && (
+            {currentUser ? (
+              <div className="navbar-nav ml-auto">
                 <li className="nav-item">
-                  <Link to={"/user/profile"} className="nav-link">
-                    Profile
+                  <p className="nav-link">
+                    {currentUser.username}
+                  </p>
+                </li>
+                {showUserBoard && (
+                  <li className="nav-item">
+                    <Link to={"/user/profile"} className="nav-link">
+                      Profile
+                    </Link>
+                  </li>
+                )}
+                <li className="nav-item">
+                  <a href="/login" className="nav-link" onClick={logOut}>
+                    Logout
+                  </a>
+                </li>
+              </div>
+            ) : (
+              <div className="navbar-nav ml-auto">
+                <li className="nav-item">
+                  <Link to={"/login"} className="nav-link">
+                    Login
                   </Link>
                 </li>
-              )}
-              <li className="nav-item">
-                <a href="/login" className="nav-link" onClick={logOut}>
-                  Logout
-                </a>
-              </li>
-            </div>
-          ) : (
-            <div className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <Link to={"/login"} className="nav-link">
-                  Login
-                </Link>
-              </li>
 
-              <li className="nav-item">
-                <Link to={"/register"} className="nav-link">
-                  Sign Up
-                </Link>
-              </li>
-            </div>
-          )}
-
-
+                <li className="nav-item">
+                  <Link to={"/register"} className="nav-link">
+                    Sign Up
+                  </Link>
+                </li>
+              </div>
+            )}
+          </div>
         </nav>
+
         <div className="Site-content">
           <div className="main">
             <div className="container mt-3">
